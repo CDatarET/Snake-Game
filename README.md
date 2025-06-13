@@ -1,68 +1,37 @@
-Snake Game in Python (Pygame)
-This is a simple implementation of the classic Snake game using the Python pygame library. The player controls a snake that moves around the screen to collect apples. Every time the snake eats an apple, it grows in length. The game continues until the player exits manually.
+##🐍 Snake Game in Python
+This is a simple implementation of the classic Snake Game written in Python using the pygame library.
 
-Features
-Basic Snake movement using arrow keys
+🎮 Features
+Classic snake gameplay
 
-Randomly spawning apples
+Score tracking
 
-Snake grows upon eating an apple
+Game Over screen
 
-Game window updates at a consistent frame rate
+Clean and minimal UI
 
-Requirements
+🛠 Requirements
 Python 3.x
 
-Pygame library
+pygame library
 
-Installation
-Clone the repository or download the code:
-
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/snake-game-pygame.git
-cd snake-game-pygame
-Install the required dependencies:
+Install dependencies with:
 
 bash
 Copy
 Edit
 pip install pygame
-Running the Game
-Run the Python script to start the game:
+🚀 How to Run
+Clone this repository:
 
 bash
 Copy
 Edit
-python snake_game.py
-Controls
-Arrow Keys: Control the direction of the snake
+git clone [https://github.com/your-username/snake-game-python.git](https://github.com/CDatarET/Snake-Game)
+cd snake-game-python
+Run the game:
 
-Up: ↑
-
-Down: ↓
-
-Left: ←
-
-Right: →
-
-Game Mechanics
-The snake starts at a fixed position and moves in a default direction (right).
-
-The apple appears randomly on the grid.
-
-When the snake's head touches the apple, the snake grows and a new apple spawns.
-
-If the player closes the window, the game exits.
-
-To Do / Future Improvements
-Add collision detection with the snake's own body or walls to end the game
-
-Display score
-
-Add start and game-over screens
-
-Sound effects and background music
-
-Improve graphics and animations
+bash
+Copy
+Edit
+python snake.py
