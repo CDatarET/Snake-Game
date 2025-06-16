@@ -3,14 +3,17 @@ import random
 
 print("hello world")
 pygame.init()
+#background color
 color = (0,0,0)
 
+#snake properties
 snakeColor = (0,255,0)
 state = 'r'
 x = 250
 y = 250
 body = [(x,y)]
 
+#apple properties
 appleColor = (255,0,0)
 appleX = random.choice(range(0, 476, 25))
 appleY = random.choice(range(0, 476, 25))
@@ -26,11 +29,11 @@ while not exit:
         if event.type == pygame.QUIT:
             exit = True
 
+    #get key
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
         if(state != 'l' and state != 'r'):
             state = 'l'
-        
     if keys[pygame.K_RIGHT]:
         if(state != 'r' and state != 'l'):
             state = 'r'
@@ -41,6 +44,7 @@ while not exit:
         if(state != 'd' and state != 'u'):
             state = 'd'
 
+    #state so snake doesnt clip backwards
     if(state == 'u' and state != 'd'):
         y = y - 25
     elif(state == 'd' and state != 'u'):
@@ -60,6 +64,7 @@ while not exit:
     nh = (x,y)
     body.append(nh)
 
+    #snake eat apple detect
     if snake.colliderect(apple):
         appleX = random.choice(range(0, 476, 25))
         appleY = random.choice(range(0, 476, 25))
